@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Map Footer</title>
+<style>
+  /* Style the footer */
+  footer {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Style the map container */
+  .map-container {
+    width: 100%; /* Set the map container to full width */
+    max-width: 600px; /* Set maximum width to prevent overflow on large screens */
+    height: 300px; /* Set initial height for the map */
+    margin: 0 auto; /* Center the map horizontally */
+  }
+
+  /* Make the map responsive */
+  .map-responsive {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 56.25%; /* 16:9 aspect ratio (divide 9 by 16 and multiply by 100) */
+  }
+  
+  .map-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+</style>
+</head>
+<body>
+  <footer>
+    <div class="map-container">
+      <div class="map-responsive">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3169.386430999635!2d-122.41941558431305!3d37.77492987975646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085807f9d1a24e5%3A0x33c49d8bd6ed706c!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2sin!4v1647372287214!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
